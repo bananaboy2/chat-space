@@ -1,4 +1,42 @@
 # README
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|name|string|index: true,null: false,unique: true|
+### Association
+has_many :groups,through: members
+has_many :messages
+has_many :members
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|groupname|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Assocoation
+
+## groups_usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+## messageテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

@@ -30,7 +30,8 @@ has_many :members
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|image|string|null: false|
+|image|string|
+|body|text|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user

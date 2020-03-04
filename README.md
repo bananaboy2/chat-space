@@ -12,19 +12,16 @@ has_many :members
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
+|name|text|null: false|
 ### Assocoation
+has_many :groups,through: members
+has_many :members
 
 ## groups_usersテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -33,9 +30,11 @@ has_many :members
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|image|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
+  belongs_to :group
 
 
 This README would normally document whatever steps are necessary to get the

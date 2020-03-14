@@ -1,0 +1,36 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "ie=edge", "http-equiv" => "X-UA-Compatible"}/
+    %link{:href => "reset.css", :rel => "stylesheet"}/
+    %link{:href => "style.css", :rel => "stylesheet"}/
+    %title chat-app
+  %body
+    
+.side-bar
+  .side-bar__user-name
+    .top-items
+      .top-items__name
+        masa
+      .top-items__menubox
+        .menubox__group-icon
+          = link_to "#", class: "top-items__name" do
+            = icon('fas','edit')
+        .menubox__edit-icon
+          = link_to "#", class: "top-items__name" do
+            = icon('fas','cog')
+  .side-bar__group-list
+    .group-team
+      .group-team__name
+        test グループ
+      .group-team__message
+        まだメッセージがありません
+      .group-team__name
+        test2 グループ
+      .group-team__message
+        腰痛い  
+  
+

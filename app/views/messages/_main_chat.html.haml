@@ -1,0 +1,40 @@
+.main-chat
+  .main-chat__group-info
+    .main-chat__group-info__leftbox
+      .main-chat__group-info__leftbox__name
+        test グループ
+      .main-chat__group-info__leftbox__menberlist
+        Menber : masa
+    .main-chat__group-info__edit
+      = link_to "#",class: "main-chat__group-info-edit" do
+        Edit
+  .main-chat__message-list
+    .message-list__info
+      .message-list__info__name
+        masa
+      .message-list__info__time
+        2020/03/09(Mon)20:18:53
+    .message-list__text
+      暑い
+    .message-list__info
+      .message-list__info__name
+        masa
+      .message-list__info__time
+        2020/03/09(Mon)20:18:53
+    .message-list__text
+      暑い
+  .main-chat_form
+    .form-new_message
+      .new_message-input-box
+        .input-box-text
+          type a message
+        .input-box-image
+          .image-gazo
+            %label{class: "image-gazo"}
+              = icon('fas','image')
+              %input{type: "file"}
+      .form-new_message-btn
+        Send
+
+          
+        

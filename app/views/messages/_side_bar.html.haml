@@ -2,14 +2,14 @@
   .side-bar__user-name
     .top-items
       .top-items__name
-        masa
+        = current_user.name
       .top-items__menubox
         .menubox__group-icon
           = link_to "#", class: "top-items__name" do
             = icon('fas','edit')
         .menubox__edit-icon
-          = link_to "#", class: "top-items__name" do
-            = icon('fas','cog')
+          = link_to edit_user_path(current_user), class: "top-items__name" do
+            = icon('fas','cog', class: 'top-items__name')
   .side-bar__group-list
     .group-team
       .group-team__name
@@ -21,4 +21,3 @@
       .group-team__message
         腰痛い  
   
-

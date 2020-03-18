@@ -5,19 +5,17 @@
         = current_user.name
       .top-items__menubox
         .menubox__group-icon
-          = link_to "#", class: "top-items__name" do
-            = icon('fas','edit')
+          = link_to new_group_path, class: "top-items__name" do
+            = icon('fas','edit', class: 'top-item__name')
         .menubox__edit-icon
           = link_to edit_user_path(current_user), class: "top-items__name" do
             = icon('fas','cog', class: 'top-items__name')
   .side-bar__group-list
-    .group-team
-      .group-team__name
-        test グループ
-      .group-team__message
-        まだメッセージがありません
-      .group-team__name
-        test2 グループ
-      .group-team__message
-        腰痛い  
+    - current_user.groups.each do |group|
+      .group-team
+        = link_to '#' do
+          .group-team__name
+            = group.name
+      -#     .group-team__message
+      -#       まだメッセージがありません
   

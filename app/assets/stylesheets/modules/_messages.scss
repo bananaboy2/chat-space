@@ -51,15 +51,15 @@
     &__leftbox {
       color: #000000;
       padding-top: 35px;
+      display: flex;
       &__name {
-            font-size: 20px;
+            font-size: 12px;
             margin-bottom: 15px;
-            padding-left: 40px;
+            padding-top: 17px;
+            color: #999999
           }
-      &__menberlist {
-        font-size: 12px;
-        padding-left: 40px;
-        color: #999999 
+      &__current-group {
+        font-size: 20px;
       }
         }  
     &__edit {
@@ -88,10 +88,12 @@
     .form-new_message {
       display: flex;
       margin-top: 10px;
+      border-style: none;
       .new_message-input-box {
         width: 100%;
         background-color: white;
         position: relative;
+        height: 50px;
         .input-box-text {
           height: 50px;
           width: 100%;
@@ -100,7 +102,7 @@
           color: #999999;
           border-style: none;
           font-family: inherit;
-          font-size: inherit;
+          font-size: 18px;
           font-weight: inherit;
          }
         .input-box-image {
@@ -134,27 +136,33 @@
         cursor: pointer;
       }
     }
+    .form__submit {
+      color: white;
+      background-color: #38aef0;
+      font-size: 18px;
+      border-style: none;
+    }
   }
 }
   
 
-.message-list__text {
+.lower-message__content {
   color: #434a54;
   font-size: 14px;
   margin-bottom: 10px;
   padding-left: 40px;
 }
 
-.message-list__info {
+.upper-message {
   display:flex;
   margin-bottom: 10px;
-  &__name {
+  &__user-name {
     color: #434a54;
     font-size: 16px;
     font-weight: bold;
     padding: 35px 10px 0 40px;
     }
-  &__time {
+  &__date {
     color: #999999;
     font-size: 12px;
     margin-left: 10px;

@@ -10,18 +10,21 @@
     .main-chat__group-info__edit
       = link_to edit_group_path(@group),class: "main-chat__group-info-edit" do
         Edit
+
   .main-chat__message-list
     = render @messages
+    .message
+      .upper-message
+        .upper-message_user-name
+        .upper-message_date
+      .lower-message
+        .lower-message_content
+  
   .main-chat_form
     = form_for [@group, @message] do |f|
-      .form-new_message
-        .new_message-input-box
-          .input-box-text
-            = f.text_field :content, class: 'form-new_message', placeholder: 'type a message'
-          .input-box-image
-            .image-gazo
-              = f.label :image, class: 'image-gazo' do
-                = icon('fas','image', class: 'icon')
-                = f.file_field :image, class: 'hidden'
-        .form-new_message-btn
-          = f.submit 'Send', class: 'form__submit'
+      .input-box-text
+        = f.text_field :content, class: 'form-new_message', placeholder: 'type a message'
+        = f.label :image, class: 'image-gazo' do
+          = icon('fas','image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit' 

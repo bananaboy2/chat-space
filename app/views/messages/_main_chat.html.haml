@@ -13,12 +13,7 @@
 
   .main-chat__message-list
     = render @messages
-    -# .message
-    -#   .upper-message
-    -#     .upper-message_user-name
-    -#     .upper-message_date
-    -#   .lower-message
-    -#     .lower-message_content
+    
   
   .main-chat_form
     = form_for [@group, @message] do |f|

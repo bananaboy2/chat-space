@@ -33,7 +33,7 @@ namespace :deploy do
   end
 
 
-set :default_env, {
+set :default_env {
 rbenv_root: "/usr/local/rbenv",　
 path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
 AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
